@@ -1,22 +1,25 @@
 script.
     // App.pug
-    import TestComponent from "./TestComponent.pug"
+    import Util from "./Util"
     import BubbleComponent from "./BubbleComponent.pug"
-    
-    let views = ["view1", "view2", "view3"]
-    var currentView = views[0]
 
-    const setView = (viewId) => currentView = viewId
+    let text = ""
+
+    Util.ServiceUtil.loadData("data/data.json").then((data) => {
+        if(data && data.values && data.values.length) 
+            text = data.values[Math.floor(Math.random() * data.values.length)]
+    })
 
 main.loccom
     .container
         header 
-            h1 Local Comedian by 
+            h1 
+                span Local Comedian by 
                 a(href="http://www.gregularcomedy.com/") Greg Behrens
 
         hr
 
-        BubbleComponent
+        BubbleComponent(text="{text}")
 
         section.greg
             img(src="img/greg.png" alt="Greg")

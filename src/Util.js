@@ -2,8 +2,8 @@
  * Util.js
  */
 import { mainWord } from './stores.js'
-
-export const Util = {
+let Util
+export default Util = {
     ArrayUtil: {
         shuffle: (arr) => {
             var currentIndex = arr.length,  randomIndex;
@@ -23,9 +23,9 @@ export const Util = {
     },
 
     ServiceUtil: {
-        loadData: async () => {
+        loadData: async (url) => {
             try {
-                let response = await fetch(MHX.dataUrl)
+                let response = await fetch(url || MHX.dataUrl)
 
                 if(response.status == 200) {
                     let json = await response.json()

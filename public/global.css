@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+/* colors */
+:root {
+	--Speech-Bubble-Border:#222;
+	--Speech-Bubble-Background:#fcfcfc;
+	--Speech-Bubble-Text:#000;
+	--bubbleSize: 2px;
+}
+
+* {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #ffcc88;
+	font-family: "Press Start 2P";
+}
+
+
+a {
+	color: #e65100;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+body {
+	padding-top: 50px;
+	margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.starter-template {
+	padding: 30px 15px;
+}
+
+header {
+	margin: 0 auto;
+}
+
+footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	color: orange;
+	height: 60px;
+}
+
+footer .heart {
+	color: red;
+	font-size: 20px;
+}
+
+hr {
+	margin: 30px 20%;
+}
+
+h1 {
+	color: orange;
+	text-align: center;
+}
+
+/* bootstrap fixes */
+.form-inline > .form-group {
+    vertical-align: top;
+}
+
+.table {
+	margin-bottom: 0;
+}
+
+.table td {
+	padding: 10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #000;
+	border-color: #222;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+	border-radius: 0;
+}
+
+.input-lg {
+	border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.jumbotron {
+    	padding-top: 30px;
+    	padding-bottom: 30px;
+	}
+
+	.container .jumbotron, .container-fluid .jumbotron {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.starter-template {
+		padding: 30px 5px;
+	}
+}

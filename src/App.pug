@@ -1,0 +1,34 @@
+script.
+    // App.pug
+    import TestComponent from "./TestComponent.pug"
+    import BubbleComponent from "./BubbleComponent.pug"
+    
+    let views = ["view1", "view2", "view3"]
+    var currentView = views[0]
+
+    const setView = (viewId) => currentView = viewId
+
+main.loccom
+    .container
+        header 
+            h1 Local Comedian by 
+                a(href="http://www.gregularcomedy.com/") Greg Behrens
+
+        hr
+
+        BubbleComponent
+
+        section.greg
+            img(src="img/greg.png" alt="Greg")
+
+        hr
+
+    footer.footer Made with 
+        span.heart &#9829; 
+        span by 
+        a(href="https://IMstandup.com") IMstandup.com
+style.
+    .loccom .greg {
+        text-align: center;
+        margin-top: 50px;
+    }

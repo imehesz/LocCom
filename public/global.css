@@ -75,7 +75,7 @@ button:focus {
 }
 
 body {
-	padding-top: 50px;
+	padding-top: 0;
 	margin-bottom: 60px; /* Margin bottom by footer height */
 }
 
@@ -96,6 +96,7 @@ footer {
 	color: orange;
 	height: 30px;
 	background-color: rgba(0,0,0,.55);
+    font-size: .85em;
 }
 
 footer .heart {
@@ -156,6 +157,10 @@ h1 {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+
+    body {
+        padding-top: 60px;
+    }
 }
 
 @media only screen and (max-width: 600px) {

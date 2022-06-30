@@ -1,3 +1,5 @@
 node_modules/*
 public/build/*
 src/config.js
+src/config.dev.js
+src/config.prod.js

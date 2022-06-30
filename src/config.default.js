@@ -2,6 +2,8 @@
  * config.default.js
  */
 
-const Config = {}
+const Config = {
+    GSheetKey: "GOOGLE SHEET KEY"
+}
 
 export default Config

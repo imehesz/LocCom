@@ -1,13 +1,23 @@
 script.
     // App.pug
     import Util from "./Util"
+    import Config from "./config"
     import BubbleComponent from "./BubbleComponent.pug"
 
     let text = ""
 
-    Util.ServiceUtil.loadData("data/data.json").then((data) => {
-        if(data && data.values && data.values.length) 
+    Util.ServiceUtil.loadData("https://sheets.googleapis.com/v4/spreadsheets/1BJE2yERgkKP7VomXL9u77ipISjwVHLTk-TOFIkrBWu0/values/Sheet1!A1:B5000?&key=" + Config.GSheetKey).then(data => {
+        if(data && data.values && data.values.length) {
             text = data.values[Math.floor(Math.random() * data.values.length)]
+        } else {
+            Util.ServiceUtil.loadData("./data/data.json").then(data => {
+                if(data && data.values && data.values.length) {
+                    text = data.values[Math.floor(Math.random() * data.values.length)]
+                } else {
+                    text = "Local Comedian can't make this stuff up."
+                }
+            })
+        }
     })
 
 main.loccom
